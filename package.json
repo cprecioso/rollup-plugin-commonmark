@@ -1,0 +1,31 @@
+{
+  "name": "rollup-plugin-commonmark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/rollup-plugin-commonmark.cjs.js",
+  "jsnext:main": "dist/rollup-plugin-commonmark.es6.js",
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:es6",
+    "build:cjs": "rollup -c -f cjs -o dist/rollup-plugin-commonmark.cjs.js",
+    "build:es6": "rollup -c -f es6 -o dist/rollup-plugin-commonmark.es6.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rollup-plugin"
+  ],
+  "files": [
+    "dist/"
+  ],
+  "author": "Carlos Precioso",
+  "license": "MIT",
+  "dependencies": {
+    "commonmark": "^0.25.0",
+    "object-assign": "^4.0.1",
+    "rollup-pluginutils": "^1.3.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "rollup": "^0.25.8",
+    "rollup-plugin-babel": "^2.4.0"
+  }
+}
